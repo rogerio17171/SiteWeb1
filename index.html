@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ComidasAbrasileiradas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- MENU -->
+    <header>
+        <h1>DELIVERY</h1>
+        <nav>
+            <a href="#banner" tabindex="0">Início</a>
+            <a href="#cardapio" tabindex="0">Cardápio</a>
+            <a href="#" onclick="abrirModal('modalCadastro')" tabindex="0">Criar conta</a>
+            <a href="#" onclick="abrirModal('modalLogin')" tabindex="0">Entrar</a>
+        </nav>
+    </header>
+
+    <!-- BANNER -->
+    <section id="banner" class="banner">
+        <h2>O VERDADEIRO SABOR DO BRASIL NA SUA MESA</h2>
+    </section>
+
+    <!-- CARDÁPIO -->
+    <section id="cardapio" class="favoritos">
+        <h2>CARDÁPIO</h2>
+
+        <div class="cards">
+
+            <div class="card" tabindex="0">
+                <img src="/imagens/feijoada.jpg">
+                <h3>Feijoada</h3>
+                <p>O clássico brasileiro com feijão preto e carnes</p>
+                <span class="preco">R$ 29,90</span>
+                <button class="btn-add">Adicionar</button>
+                <button class="btn-remove">Remover</button>
+            </div>
+
+            <div class="card" tabindex="0">
+                <img src="imagens/picanha.jpg">
+                <h3>Picanha</h3>
+                <p>Corte nobre grelhado com muito sabor</p>
+                <span class="preco">R$ 49,90</span>
+                <button class="btn-add">Adicionar</button>
+                <button class="btn-remove">Remover</button>
+            </div>
+
+            <div class="card" tabindex="0">
+                <img src="imagens/moqueca.jpg">
+                <h3>Moqueca</h3>
+                <p>Peixe com leite de coco e temperos brasileiros</p>
+                <span class="preco">R$ 39,90</span>
+                <button class="btn-add">Adicionar</button>
+                <button class="btn-remove">Remover</button>
+            </div>
+
+            <div class="card" tabindex="0">
+                <img src="imagens/acaraje.jpg">
+                <h3>Acarajé</h3>
+                <p>Bolinhos fritos recheados com vatapá</p>
+                <span class="preco">R$ 19,90</span>
+                <button class="btn-add">Adicionar</button>
+                <button class="btn-remove">Remover</button>
+            </div>
+
+            <div class="card" tabindex="0">
+                <img src="imagens/Pastel.jpg">
+                <h3>Pastel</h3>
+                <p>Crocante e recheado com diversos sabores</p>
+                <span class="preco">R$ 9,90</span>
+                <button class="btn-add">Adicionar</button>
+                <button class="btn-remove">Remover</button>
+            </div>
+
+            <div class="card" tabindex="0">
+                <img src="imagens/coxinha.jpg">
+                <h3>Coxinha</h3>
+                <p>Salgado clássico recheado com frango</p>
+                <span class="preco">R$ 7,90</span>
+                <button class="btn-add">Adicionar</button>
+                <button class="btn-remove">Remover</button>
+            </div>
+
+            <div class="card" tabindex="0">
+                <img src="imagens/escondidinho.jpg">
+                <h3>Escondidinho</h3>
+                <p>Carne com purê gratinado irresistível</p>
+                <span class="preco">R$ 24,90</span>
+                <button class="btn-add">Adicionar</button>
+                <button class="btn-remove">Remover</button>
+            </div>
+
+            <div class="card" tabindex="0">
+                <img src="imagens/paodequeijo.jpg">
+                <h3>Pão de Queijo</h3>
+                <p>Deliciosamente macio por dentro e levemente crocante por fora</p>
+                <span class="preco">R$ 2,0</span>
+                <button class="btn-add">Adicionar</button>
+                <button class="btn-remove">Remover</button>
+            </div>
+
+        </div>
+    </section>
+
+    <button id="botaoCarrinho" class="botao-tema" style="bottom: 90px; right: 20px;">
+        🛒
+        <span id="contadorCarrinho" style="position:absolute; top:-8px; right:-8px; 
+        background:red; color:white; border-radius:50%; padding:2px 6px; font-size:12px;">0</span>
+    </button>
+
+    <!-- Botão de tema escuro -->
+    <button id="toggleTema" class="botao-tema" style="bottom: 20px; right: 20px;">🌙</button>
+
+    <!-- ===== MODAL CADASTRO ===== -->
+    <div id="modalCadastro" class="modal">
+        <div class="modal-content">
+            <span class="fechar" onclick="fecharModal('modalCadastro')">&times;</span>
+            <h2>Criar Conta</h2>
+
+            <form class="form-cadastro">
+                <input type="text" placeholder="Nome completo">
+                <input type="text" placeholder="Telefone">
+                <input type="text" placeholder="Endereço">
+                <input type="text" placeholder="CPF">
+                <input type="email" placeholder="Email">
+
+                <button class="concluir">Concluir</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ===== MODAL LOGIN ===== -->
+    <div id="modalLogin" class="modal">
+        <div class="modal-content">
+            <span class="fechar" onclick="fecharModal('modalLogin')">&times;</span>
+            <h2>Entrar</h2>
+
+            <form class="form-cadastro">
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Senha">
+
+                <button class="concluir">Entrar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
